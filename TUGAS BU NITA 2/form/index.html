@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        box-sizing: border-box;
+    }
+    body{
+        background: url(so) no-repeat fixed;background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .container{
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+        border: 2px dashed white;
+        background: color-mix(in srgb, rgb(6, 12, 53) 50%, transparent 20%);;
+        padding: 60px;
+        border-radius: 40px;
+    }
+    .container header{
+        font-size: 1rem;
+        color: white;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 15px;
+        border-bottom: 2px dashed white;
+    }
+    .form .input-box{
+        width: 100%;
+        margin-top: 15px;
+    }
+    .input-box h3{
+        color: white;
+    }
+    .input input{
+        color: black;
+        width: 100%;
+    }
+    .input select{
+        color: black;
+        width: 100%;
+    }
+    .input option{
+        color: black;
+    }
+    .column button{
+        color:darkblue;
+        width: 85px;
+        
+    }
+    .form .column{
+        display: flex;
+        column-gap: 7px;
+        justify-content: center;
+        height: 25px;
+        margin-top: 15px;
+    }
+    .form .gender{
+        margin-top: 15px;
+    }
+    .gender .gender-option{
+        display: flex;
+        column-gap: 10px;
+    }
+    
+    .column button:hover{
+        background:rgb(26, 49, 56);
+        color:white
+    }
+
+    
+    @media screen and  (max-width:500px) {
+    .form .column{
+        flex-wrap: wrap;
+    }
+}
+    </style>
+    <body style="background: url(wanokuni.jpeg) no-repeat fixed;background-size: cover;"></body>
+    <div class="container">
+        <header><h2>Formulir Anggota Perpustakaan</h2></header>
+        <form class="form" action="#">
+            <div class="input-box"> 
+                <h3>Nama</h3>
+                <div class="input">
+                <input type="text" placeholder="Masukan Nama">
+                </div>
+            </div>
+            <div class="input-box"> 
+                <h3>Kota Lahir</h3>
+                <div class="input">
+                <input type="text" list="kota_lahir" name="kota_lahir" placeholder="Masukan kota/pilih kota lahir">
+                <datalist id="kota_lahir">
+                    <option value="Semarang">Semarang</option>
+                    <option value="Balikpapan">Balikpapan</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bali">Bali</option>
+                    <option value="Tegal">Tegal</option>
+                    <option value="Yogyakarta">Yogyakarta</option>
+                </datalist>
+                </div> 
+            </div>
+            <div class="input-box"> 
+                <h3>Tanggal Lahir</h3>
+                <div class="input">
+                <input type="date" required>
+                </div>
+            </div>
+            <div class="gender"> 
+                <h3>Gender</h3>
+                <div class="gender-option">
+                    <div class="gdr">
+                        <input type="radio" id="pria" name="gender">
+                        <label for="pria">Pria</label>
+                    </div>
+                    <div class="gdr">
+                        <input type="radio" id="wanita" name="gender">
+                        <label for="wanita">Wanita</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box"> 
+                <h3>No. Telepon</h3>
+                <div class="input">
+                <input type="number" placeholder="Masukan Nomor Telp" required>
+                </div>
+            </div>
+            <div class="input-box">
+                <h3>Buku Favorit</h3>
+                <input type="checkbox" name="Buku_Favorit" value="Nasi Goreng">Si Kancil
+                <input type="checkbox" name="Buku_Favorit" value="Mie Goreng">One piece
+            </div>
+            <div class="input-box"> 
+                <h3>Agama</h3>
+                <div class="input">
+                <select name="pilih">
+                    <div class="input">
+                    <option value="Islam">Islam</option>
+                    <option value="Katholik">Katholik</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Buddha">Buddha</option>
+                    <option value="Konghuchu">Konghuchu</option>
+                    </div>
+                </select>
+                </div>
+            </div>
+            <div class="input-box address"> 
+                <h3>Alamat</h3>
+                <div class="input">
+                <input type="text" placeholder="Masukan Alamat">
+                </div>
+            </div>
+            <div class="column">
+                <button>Clear</button>
+                <button>Send</button>
+            </div>
+        </form>
+    </div>
+ </body>
+</html>
